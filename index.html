@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuiserie Rouxel — Fenêtres, volets et portes à Saint-Sauveur-le-Vicomte</title>
+<meta name="description" content="Menuiserie Rouxel à Saint-Sauveur-le-Vicomte : fenêtres, volets et portes donnant sur l'extérieur. Artisan local, finitions soignées. ☎ 02 33 41 76 73">
+<meta name="keywords" content="menuisier Saint-Sauveur-le-Vicomte, fenêtres sur mesure Cotentin, volets roulants Manche, portes extérieures Normandie, menuiserie aluminium Saint-Sauveur-le-Vicomte, artisan menuisier Valognes, remplacement fenêtres Cherbourg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A1A1A;
+    --secondary: #C9A227;
+    --background: #F5F0E6;
+    --text: #2B2B2B;
+    --cta: #C9A227;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+    --radius: 0;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1.25;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .cta {
+    display: inline-block;
+    background-color: var(--cta);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.85rem 2rem;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+  }
+
+  .cta:hover {
+    background-color: #a8841e;
+    transform: translateY(-2px);
+  }
+
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .section-heading {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 1rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+    color: #555;
+    max-width: 640px;
+    margin-bottom: 2rem;
+  }
+
+  section { padding: var(--spacing-lg) var(--spacing-md); }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* ===== FADE-IN ANIMATION ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== CORNER FRAME ===== */
+  .corner-frame {
+    position: relative;
+    display: inline-block;
+  }
+  .corner-frame::before,
+  .corner-frame::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-color: var(--secondary);
+    border-style: solid;
+    z-index: 2;
+  }
+  .corner-frame::before {
+    top: -8px;
+    left: -8px;
+    border-width: 2px 0 0 2px;
+  }
+  .corner-frame::after {
+    bottom: -8px;
+    right: -8px;
+    border-width: 0 2px 2px 0;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(26,26,26,0.97);
+    backdrop-filter: blur(6px);
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+
+  .nav-logo span { color: var(--secondary); }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  nav ul li a {
+    color: #e0d8c8;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  nav ul li a:hover { color: var(--secondary); }
+
+  nav ul li a.cta {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .burger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 767px) {
+    .burger { display: flex; }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: rgba(26,26,26,0.98);
+      padding: 1.5rem var(--spacing-md);
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    nav ul.open { display: flex; }
+
+    nav ul li a.cta {
+      padding: 0.6rem 1.4rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    nav ul { display: flex !important; }
+    .burger { display: none; }
+  }
+
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(26,26,26,0.82) 0%, rgba(26,26,26,0.45) 60%, rgba(26,26,26,0.15) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem var(--spacing-md) 4rem;
+    width: 100%;
+  }
+
+  .hero-inner {
+    max-width: 580px;
+  }
+
+  .hero-inner .section-label { color: var(--secondary); }
+
+  .hero-inner h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .hero-inner .subheading {
+    font-size: 1.1rem;
+    color: #e0d8c8;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .hero-inner .hero-text {
+    font-size: 0.95rem;
+    color: #c8bfaf;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero-phone {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .hero-phone:hover { color: var(--secondary); }
+
+  /* ===== ABOUT ===== */
+  #apropos {
+    background: #fff;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about-image-wrap {
+    width: 100%;
+  }
+
+  .about-image-wrap img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .about-text p {
+    margin-bottom: 1.25rem;
+    color: #444;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-image-wrap img { height: 420px; }
+  }
+
+  /* ===== FEATURED MENU ===== */
+  #prestations {
+    background: var(--background);
+  }
+
+  .prestations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (min-width: 600px) {
+    .prestations-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 1024px) {
+    .prestations-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .prestation-card {
+    background: #fff;
+    padding: 2rem 1.75rem;
+    border-top: 3px solid var(--secondary);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .prestation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  }
+
+  .prestation-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1.25rem;
+    color: var(--secondary);
+  }
+
+  .prestation-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prestation-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  /* ===== REVIEWS ===== */
+  #avis {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  #avis .section-heading { color: #fff; }
+  #avis .section-text { color: #b0a898; }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .review-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,162,39,0.25);
+    padding: 2rem 1.75rem;
+    position: relative;
+  }
+
+  .review-quote-icon {
+    color: var(--secondary);
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: Georgia, serif;
+  }
+
+  .review-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .star {
+    color: var(--secondary);
+    font-size: 1rem;
+  }
+
+  .review-text {
+    font-size: 0.92rem;
+    color: #d0c8b8;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    white-space: pre-line;
+  }
+
+  .review-author {
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+
+  .review-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.2rem;
+  }
+
+  /* ===== GALLERY CAROUSEL ===== */
+  #galerie {
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc(100% - 1rem);
+    position: relative;
+  }
+
+  @media (min-width: 600px) {
+    .carousel-slide { flex: 0 0 calc(50% - 0.5rem); }
+  }
+
+  @media (min-width: 1024px) {
+    .carousel-slide { flex: 0 0 calc(33.333% - 0.667rem); }
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .carousel-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .carousel-btn:hover { background: var(--secondary); }
+
+  /* ===== HOURS & LOCATION ===== */
+  #horaires {
+    background: var(--background);
+  }
+
+  .hours-location-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .hours-location-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid #e0d8c8;
+  }
+
+  .hours-table td {
+    padding: 0.65rem 0;
+    color: #444;
+  }
+
+  .hours-table td:first-child {
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: capitalize;
+    width: 40%;
+  }
+
+  .hours-table .closed { color: #999; }
+
+  .contact-info {
+    margin-top: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .contact-info strong { color: var(--primary); }
+
+  .map-container {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* ===== CONTACT FORM ===== */
+  #contact {
+    background: #fff;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .contact-aside h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-aside p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-aside .phone-link {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-aside .email-link {
+    font-size: 0.95rem;
+    color: #555;
+    text-decoration: underline;
+  }
+
+  .contact-form-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d0c8b8;
+    background: var(--background);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--secondary);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+
+  .form-submit { margin-top: 0.5rem; }
+
+  /* ===== TRUST SIGNALS ===== */
+  #confiance {
+    background: var(--background);
+    border-top: 3px solid var(--secondary);
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .trust-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .trust-grid { grid-template-columns: repeat(5, 1fr); }
+  }
+
+  .trust-item {
+    background: #fff;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+
+  .trust-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .trust-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+  }
+
+  .trust-item p {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--primary);
+    color: #b0a898;
+    padding: 3rem var(--spacing-md) 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+  }
+
+  .footer-brand h3 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+  }
+
+  .footer-col ul li {
+    font-size: 0.85rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-col ul li:last-child { border-bottom: none; }
+
+  .footer-col ul li span:first-child {
+    font-weight: 600;
+    color: #d0c8b8;
+    text-transform: capitalize;
+  }
+
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  /* ===== DIVIDER ===== */
+  .gold-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--secondary);
+    margin: 1rem 0 1.5rem;
+  }
+
+  /* ===== RESPONSIVE PADDING ===== */
+  @media (min-width: 768px) {
+    section { padding: var(--spacing-xl) var(--spacing-md); }
+  }
+
+/* ── GARDE-FOU NAV (post-traitement deterministe, pas le LLM) ────────────────
+   Le modele produit typiquement `nav ul.open { flex-direction:column }` SANS
+   media query. Sa specificite (0,2,1) bat la regle desktop `nav ul` (0,0,2)
+   quand celle-ci n'a pas !important sur flex-direction : au retour en desktop
+   apres ouverture du burger, le menu reste empile en colonne (menu casse).
+   Cette regle force l'etat desktop quel que soit l'etat de .open. */
+@media (min-width: 768px) {
+  nav ul, nav ul.open, nav.open ul, nav ul[data-open="true"] {
+    flex-direction: row !important;
+    position: static !important;
+    display: flex !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: auto !important;
+  }
+  .burger, button.burger, .nav-toggle, #burger, .burger-menu { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Navigation principale">
+  <a href="#hero" class="nav-logo">Menuiserie <span>Rouxel</span></a>
+  <button class="burger" aria-label="Ouvrir le menu" id="burger">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#prestations">Prestations</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#galerie">Réalisations</a></li>
+    <li><a href="#horaires">Horaires</a></li>
+    <li><a href="#contact" class="cta" aria-label="Demander un devis gratuit">Devis gratuit</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Accueil Menuiserie Rouxel">
+  <div class="hero-bg" role="img" aria-label="Menuiserie extérieure, fenêtres et portes en lumière naturelle"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-inner fade-in">
+      <span class="section-label">Artisan menuisier — Saint-Sauveur-le-Vicomte</span>
+      <h1>Menuiserie Rouxel, votre artisan menuisier à Saint-Sauveur-le-Vicomte</h1>
+      <p class="subheading">Fenêtres, volets et portes donnant sur l'extérieur — un travail soigné, des matériaux de qualité et des délais respectés.</p>
+      <p class="hero-text">Située au 1 Rue de l'Avenir, ZA de l'Abbaye à Saint-Sauveur-le-Vicomte, la Menuiserie Rouxel met son savoir-faire au service de vos projets de menuiserie extérieure. Une équipe professionnelle, à l'écoute, qui vous conseille et vous accompagne du premier échange à la pose.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="cta" aria-label="Demander un devis gratuit">Demander un devis gratuit</a>
+        <a href="tel:0233417673" class="hero-phone" aria-label="Nous appeler au 02 33 41 76 73">02 33 41 76 73</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos" aria-label="À propos de la Menuiserie Rouxel">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap fade-in">
+        <div class="corner-frame">
+          <img src="assets/gallery-1.jpg" alt="Artisan menuisier Rouxel au travail, pose de fenêtres à Saint-Sauveur-le-Vicomte" loading="lazy">
+        </div>
+      </div>
+      <div class="about-text fade-in">
+        <span class="section-label">Notre histoire</span>
+        <h2 class="section-heading">Un savoir-faire artisanal, une équipe à votre écoute</h2>
+        <div class="gold-divider"></div>
+        <p>La Menuiserie Rouxel est une entreprise locale implantée à Saint-Sauveur-le-Vicomte, dans la Manche. Spécialisée dans les fenêtres, volets et portes donnant sur l'extérieur, elle accompagne particuliers et clients de proximité dans leurs travaux de menuiserie.</p>
+        <p>Nos clients saluent notre professionnalisme, notre ponctualité et notre écoute : comprendre précisément vos attentes pour vous conseiller avec bienveillance, c'est notre façon de travailler. Une équipe réactive, des finitions soignées, des matériaux de qualité et des délais respectés : voilà ce que nous nous engageons à vous offrir.</p>
+        <a href="tel:0233417673" class="cta" aria-label="Contactez-nous au 02 33 41 76 73">Contactez-nous au 02 33 41 76 73</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESTATIONS -->
+<section id="prestations" aria-label="Nos prestations de menuiserie extérieure">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Ce que nous faisons</span>
+      <h2 class="section-heading">Nos prestations</h2>
+      <div class="gold-divider"></div>
+      <p class="section-text">La Menuiserie Rouxel intervient sur vos menuiseries extérieures :</p>
+    </div>
+    <div class="prestations-grid">
+      <div class="prestation-card fade-in">
+        <svg class="prestation-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <rect x="6" y="6" width="32" height="32" rx="0"/>
+          <line x1="22" y1="6" x2="22" y2="38"/>
+          <line x1="6" y1="22" x2="38" y2="22"/>
+        </svg>
+        <h3>Fenêtres</h3>
+        <p>Fabrication et pose de fenêtres adaptées à votre logement.</p>
+      </div>
+      <div class="prestation-card fade-in">
+        <svg class="prestation-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <rect x="8" y="4" width="28" height="36" rx="0"/>
+          <line x1="8" y1="14" x2="36" y2="14"/>
+          <line x1="8" y1="24" x2="36" y2="24"/>
+          <line x1="8" y1="34" x2="36" y2="34"/>
+        </svg>
+        <h3>Volets</h3>
+        <p>Volets pour protéger et habiller vos ouvertures.</p>
+      </div>
+      <div class="prestation-card fade-in">
+        <svg class="prestation-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <rect x="6" y="4" width="32" height="38" rx="0"/>
+          <circle cx="32" cy="22" r="2.5" fill="currentColor" stroke="none"/>
+          <line x1="6" y1="22" x2="38" y2="22"/>
+        </svg>
+        <h3>Portes donnant sur l'extérieur</h3>
+        <p>Portes extérieures et portails, avec notamment le changement de moteur de portail électrique.</p>
+      </div>
+    </div>
+    <div class="fade-in" style="text-align:center;">
+      <a href="tel:0233417673" class="cta" aria-label="Demandez votre devis au 02 33 41 76 73">Demandez votre devis au 02 33 41 76 73</a>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section id="avis" aria-label="Avis clients Menuiserie Rouxel">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label" style="color:var(--secondary);">Témoignages</span>
+      <h2 class="section-heading">Ce que disent nos clients</h2>
+      <div class="gold-divider"></div>
+      <p class="section-text">Nos clients partagent leur expérience :</p>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card fade-in">
+        <div class="review-quote-icon" aria-hidden="true">&#8220;</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">Je suis ravie du travail réalisé par ce menuisier ! Professionnel, ponctuel et surtout très à l'écoute, il a su comprendre parfaitement mes attentes et me conseiller avec beaucoup de bienveillance.
+
+Son équipe est également très réactive, ce qui est particulièrement appréciable.
+
+Le résultat est impeccable : des finitions soignées, des matériaux de qualité et des délais parfaitement respectés.
+
+Au-delà de son savoir-faire, c'est aussi une personne chaleureuse et très agréable.
+
+Merci encore pour ce superbe travail !</p>
+        <p class="review-author">Marlyn Lys</p>
+        <p class="review-date">il y a 6&nbsp;mois</p>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-quote-icon" aria-hidden="true">&#8220;</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">Qualité des matériaux et super travail.
+Très bonne équipe professionnelle. Delais respectés. Nous recommandons fortement.</p>
+        <p class="review-author">Catherinr Yver</p>
+        <p class="review-date">il y a un an</p>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="review-quote-icon" aria-hidden="true">&#8220;</div>
+        <div class="review-stars" aria-label="5 étoiles sur 5">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">Nous sommes très content suite au changement du moteur de notre portail électrique. Intervention rapide et sérieuse.</p>
+        <p class="review-author">Monique Ezequel</p>
+        <p class="review-date">il y a 3&nbsp;ans</p>
+      </div>
+
+    </div>
+    <div class="fade-in" style="text-align:center;">
+      <a href="tel:0233417673" class="cta" aria-label="Appelez-nous au 02 33 41 76 73">Appelez-nous au 02 33 41 76 73</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie" aria-label="Galerie de réalisations Menuiserie Rouxel">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Nos réalisations</span>
+      <h2 class="section-heading">Nos réalisations en images</h2>
+      <div class="gold-divider"></div>
+      <p class="section-text">Découvrez quelques-unes de nos réalisations en menuiserie extérieure : fenêtres, volets et portes donnant sur l'extérieur, posés avec soin chez nos clients de la région de Saint-Sauveur-le-Vicomte.</p>
+    </div>
+    <div class="carousel-wrapper fade-in" aria-label="Carrousel de réalisations">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <div class="corner-frame" style="width:100%;">
+            <img src="assets/hero.jpg" alt="Réalisation menuiserie extérieure — fenêtres posées par Menuiserie Rouxel" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="corner-frame" style="width:100%;">
+            <img src="assets/gallery-1.jpg" alt="Réalisation volets — Menuiserie Rouxel à Saint-Sauveur-le-Vicomte" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="corner-frame" style="width:100%;">
+            <img src="assets/gallery-2.jpg" alt="Réalisation porte extérieure — Menuiserie Rouxel, Manche" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls fade-in">
+      <button class="carousel-btn" id="prevBtn" aria-label="Image précédente">&#8592;</button>
+      <button class="carousel-btn" id="nextBtn" aria-label="Image suivante">&#8594;</button>
+    </div>
+    <div class="fade-in">
+      <p style="font-size:0.95rem;color:#555;margin-bottom:1.5rem;">Envie d'un projet similaire ? Appelez le 02 33 41 76 73.</p>
+      <a href="tel:0233417673" class="cta" aria-label="Appelez le 02 33 41 76 73">Appelez le 02 33 41 76 73</a>
+    </div>
+  </div>
+</section>
+
+<!-- HORAIRES & ADRESSE -->
+<section id="horaires" aria-label="Horaires et adresse Menuiserie Rouxel">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Nous trouver</span>
+      <h2 class="section-heading">Horaires et adresse</h2>
+      <div class="gold-divider"></div>
+      <p class="section-text">Retrouvez-nous à la Menuiserie Rouxel :</p>
+    </div>
+    <div class="hours-location-grid">
+      <div class="fade-in">
+        <table class="hours-table" aria-label="Horaires d'ouverture">
+          <tbody>
+            <tr>
+              <td>Lundi</td>
+              <td>08:30 – 12:00, 13:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Mardi</td>
+              <td>08:30 – 12:00, 13:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Mercredi</td>
+              <td>08:30 – 12:00, 13:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Jeudi</td>
+              <td>08:30 – 12:00, 13:30 – 18:00</td>
+            </tr>
+            <tr>
+              <td>Vendredi</td>
+              <td>09:00 – 12:00</td>
+            </tr>
+            <tr>
+              <td>Samedi</td>
+              <td class="closed">Fermé</td>
+            </tr>
+            <tr>
+              <td>Dimanche</td>
+              <td class="closed">Fermé</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="contact-info" style="margin-top:2rem;">
+          <p><strong>Adresse :</strong> 1 Rue de l'Avenir ZA de, 50390 Saint-Sauveur-le-Vicomte, France</p>
+          <p><strong>Téléphone :</strong> <a href="tel:0233417673" style="color:var(--secondary);font-weight:600;">02 33 41 76 73</a></p>
+          <p><strong>E-mail :</strong> <a href="mailto:menuiserie-rouxel@orange.fr" style="color:var(--secondary);">menuiserie-rouxel@orange.fr</a></p>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="tel:0233417673" class="cta" aria-label="Appelez-nous au 02 33 41 76 73">Appelez-nous au 02 33 41 76 73</a>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=1+Rue+de+l%27Avenir+ZA+de,+50390+Saint-Sauveur-le-Vicomte,+France&output=embed"
+            title="Carte Menuiserie Rouxel — 1 Rue de l'Avenir ZA de, 50390 Saint-Sauveur-le-Vicomte"
+            loading="lazy"
+            allowfullscreen
+            aria-label="Carte Google Maps de la Menuiserie Rouxel à Saint-Sauveur-le-Vicomte">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE DE CONTACT -->
+<section id="contact" aria-label="Formulaire de contact et devis Menuiserie Rouxel">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-aside fade-in">
+        <span class="section-label">Contactez-nous</span>
+        <h2 class="section-heading">Demandez votre devis</h2>
+        <div class="gold-divider"></div>
+        <p>Un projet de fenêtres, de volets ou de portes donnant sur l'extérieur ? Écrivez-nous ou appelez-nous : nous vous répondrons avec plaisir.</p>
+        <a href="tel:0233417673" class="phone-link" aria-label="Appeler le 02 33 41 76 73">02 33 41 76 73</a>
+        <a href="mailto:menuiserie-rouxel@orange.fr" class="email-link" aria-label="Envoyer un e-mail à menuiserie-rouxel@orange.fr">menuiserie-rouxel@orange.fr</a>
+      </div>
+      <div class="fade-in">
+        <form action="https://checkout.kamkod.com/contact" method="POST" class="contact-form-inner" aria-label="Formulaire de demande de devis">
+          <input type="hidden" name="lead_id" value="ChIJjzTRRrCHDEgRbnMQUmzgV98">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre projet (fenêtres, volets, portes, portail…)" required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="cta" aria-label="Envoyer votre demande de devis">Demander un devis gratuit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SIGNALS -->
+<section id="confiance" aria-label="Pourquoi faire confiance à la Menuiserie Rouxel">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Nos engagements</span>
+      <h2 class="section-heading">Pourquoi nous faire confiance</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">⭐</span>
+        <h4>Note de 4,9/5</h4>
+        <p>Nos clients nous attribuent une note moyenne de 4,9 sur 5, sur 14 avis.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">✦</span>
+        <h4>Finitions soignées</h4>
+        <p>Des finitions soignées et des matériaux de qualité, salués par nos clients.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">🗓</span>
+        <h4>Délais respectés</h4>
+        <p>Des délais parfaitement respectés, du devis à la pose.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">👷</span>
+        <h4>Équipe réactive</h4>
+        <p>Une équipe professionnelle, ponctuelle, réactive et à votre écoute.</p>
+      </div>
+      <div class="trust-item fade-in">
+        <span class="trust-icon" aria-hidden="true">📍</span>
+        <h4>Entreprise locale</h4>
+        <p>Une menuiserie implantée à Saint-Sauveur-le-Vicomte, proche de chez vous.</p>
+      </div>
+    </div>
+    <div class="fade-in" style="text-align:center;">
+      <a href="tel:0233417673" class="cta" aria-label="Appelez-nous au 02 33 41 76 73">Appelez-nous au 02 33 41 76 73</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer aria-label="Pied de page Menuiserie Rouxel">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Menuiserie Rouxel</h3>
+      <p>Fenêtres, volets et portes donnant sur l'extérieur.<br>
+      1 Rue de l'Avenir ZA de, 50390 Saint-Sauveur-le-Vicomte, France.<br>
+      Téléphone : <a href="tel:0233417673" style="color:var(--secondary);">02 33 41 76 73</a> — E-mail : <a href="mailto:menuiserie-rouxel@orange.fr" style="color:var(--secondary);">menuiserie-rouxel@orange.fr</a></p>
+      <a href="tel:0233417673" class="cta" aria-label="Appelez-nous au 02 33 41 76 73">Appelez-nous au 02 33 41 76 73</a>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#avis">Avis clients</a></li>
+        <li><a href="#galerie">Réalisations</a></li>
+        <li><a href="#horaires">Horaires</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Horaires</h4>
+      <ul>
+        <li><span>Lundi</span> <span>08:30 – 12:00, 13:30 – 18:00</span></li>
+        <li><span>Mardi</span> <span>08:30 – 12:00, 13:30 – 18:00</span></li>
+        <li><span>Mercredi</span> <span>08:30 – 12:00, 13:30 – 18:00</span></li>
+        <li><span>Jeudi</span> <span>08:30 – 12:00, 13:30 – 18:00</span></li>
+        <li><span>Vendredi</span> <span>09:00 – 12:00</span></li>
+        <li><span>Samedi</span> <span>Fermé</span></li>
+        <li><span>Dimanche</span> <span>Fermé</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Menuiserie Rouxel — Saint-Sauveur-le-Vicomte, Manche.</span>
+    <span>Artisan menuisier local — Devis gratuit.</span>
+  </div>
+</footer>
+
+<script>
+  // BURGER MENU
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burger.addEventListener('click', function() {
+    navMenu.classList.toggle('open');
+    const isOpen = navMenu.classList.contains('open');
+    burger.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+
+  // Close menu on link click (mobile)
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      burger.setAttribute('aria-label', 'Ouvrir le menu');
+    });
+  });
+
+  // CAROUSEL
+  const track = document.getElementById('carouselTrack');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentIndex = 0;
+
+  function getSlidesPerView() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 600) return 2;
+    return 1;
+  }
+
+  function getSlideWidth() {
+    const slides = track.querySelectorAll('.carousel-slide');
+    if (slides.length === 0) return 0;
+    return slides[0].getBoundingClientRect().width + 16; // gap 1rem = 16px
+  }
+
+  function updateCarousel() {
+    const slideWidth = getSlideWidth();
+    track.style.transform = 'translateX(-' + (currentIndex * slideWidth) + 'px)';
+  }
+
+  function getTotalSlides() {
+    return track.querySelectorAll('.carousel-slide').length;
+  }
+
+  nextBtn.addEventListener('click', function() {
+    const total = getTotalSlides();
+    const perView = getSlidesPerView();
+    const maxIndex = Math.max(0, total - perView);
+    currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', function() {
+    const total = getTotalSlides();
+    const perView = getSlidesPerView();
+    const maxIndex = Math.max(0, total - perView);
+    currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', function() {
+    currentIndex = 0;
+    updateCarousel();
+  });
+
+  // FADE-IN INTERSECTION OBSERVER
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function(el) {
+    observer.observe(el);
+  });
+</script>
+<!-- KAMKOD:DEMO_START -->
+<script>
+(function(){
+  var URL = 'https://checkout.kamkod.com/?lead=ChIJjzTRRrCHDEgRbnMQUmzgV98';
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;               /* formulaire -> endpoint contact */
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;           /* navigation interne de la démo */
+    var a = e.target.closest('a');
+    if(!a) return;                                      /* bouton seul hors nav: on laisse */
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;                  /* ancres de section */
+    if(/^https?:|^\/\//i.test(href)) return;          /* lien externe réel */
+    e.preventDefault(); window.location.href = URL;     /* tel:, mailto:, javascript:… */
+  }, true);
+})();
+</script>
+<div id="kamkod-demo-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  Ceci est un aperçu de votre futur site — <a href="https://checkout.kamkod.com/?lead=ChIJjzTRRrCHDEgRbnMQUmzgV98" style="color:#FFD700;font-weight:600;">activez-le maintenant</a>
+</div>
+<!-- KAMKOD:DEMO_END -->
+</body>
+</html>
